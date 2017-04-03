@@ -1,0 +1,1144 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/node-webot/wechat#readme"
+
+    >wechat (v2.1.0)</a>
+</h1>
+<h4>微信公共平台Node库</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat">module wechat</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.Event">
+            function <span class="apidocSignatureSpan">wechat.</span>Event
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List">
+            function <span class="apidocSignatureSpan">wechat.</span>List
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.checkSignature">
+            function <span class="apidocSignatureSpan">wechat.</span>checkSignature
+            <span class="apidocSignatureSpan">(query, token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.event">
+            function <span class="apidocSignatureSpan">wechat.</span>event
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.image">
+            function <span class="apidocSignatureSpan">wechat.</span>image
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.link">
+            function <span class="apidocSignatureSpan">wechat.</span>link
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.location">
+            function <span class="apidocSignatureSpan">wechat.</span>location
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.reply">
+            function <span class="apidocSignatureSpan">wechat.</span>reply
+            <span class="apidocSignatureSpan">(content, fromUsername, toUsername, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.reply2CustomerService">
+            function <span class="apidocSignatureSpan">wechat.</span>reply2CustomerService
+            <span class="apidocSignatureSpan">(fromUsername, toUsername, kfAccount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.session">
+            function <span class="apidocSignatureSpan">wechat.</span>session
+            <span class="apidocSignatureSpan">(id, req, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.shortvideo">
+            function <span class="apidocSignatureSpan">wechat.</span>shortvideo
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.text">
+            function <span class="apidocSignatureSpan">wechat.</span>text
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.toXML">
+            function <span class="apidocSignatureSpan">wechat.</span>toXML
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.video">
+            function <span class="apidocSignatureSpan">wechat.</span>video
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.voice">
+            function <span class="apidocSignatureSpan">wechat.</span>voice
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wechat.</span>Event.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wechat.</span>List.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wechat.</span>session.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.Event">module wechat.Event</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.Event.Event">
+            function <span class="apidocSignatureSpan">wechat.</span>Event
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.Event.dispatch">
+            function <span class="apidocSignatureSpan">wechat.Event.</span>dispatch
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.Event.prototype">module wechat.Event.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.Event.prototype._dispatch">
+            function <span class="apidocSignatureSpan">wechat.Event.prototype.</span>_dispatch
+            <span class="apidocSignatureSpan">(message, req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.Event.prototype.add">
+            function <span class="apidocSignatureSpan">wechat.Event.prototype.</span>add
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.List">module wechat.List</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List.List">
+            function <span class="apidocSignatureSpan">wechat.</span>List
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List.add">
+            function <span class="apidocSignatureSpan">wechat.List.</span>add
+            <span class="apidocSignatureSpan">(name, items, head, delimiter, foot)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List.clear">
+            function <span class="apidocSignatureSpan">wechat.List.</span>clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List.get">
+            function <span class="apidocSignatureSpan">wechat.List.</span>get
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.List.prototype">module wechat.List.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.List.prototype.get">
+            function <span class="apidocSignatureSpan">wechat.List.prototype.</span>get
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.session">module wechat.session</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.session.session">
+            function <span class="apidocSignatureSpan">wechat.</span>session
+            <span class="apidocSignatureSpan">(id, req, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wechat.session.prototype">module wechat.session.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.session.prototype.destroy">
+            function <span class="apidocSignatureSpan">wechat.session.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.session.prototype.save">
+            function <span class="apidocSignatureSpan">wechat.session.prototype.</span>save
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat" id="apidoc.module.wechat">module wechat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.Event" id="apidoc.element.wechat.Event">
+        function <span class="apidocSignatureSpan">wechat.</span>Event
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Event = function () {
+  this.events = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List" id="apidoc.element.wechat.List">
+        function <span class="apidocSignatureSpan">wechat.</span>List
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">List = function () {
+  this.map = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.checkSignature" id="apidoc.element.wechat.checkSignature">
+        function <span class="apidocSignatureSpan">wechat.</span>checkSignature
+        <span class="apidocSignatureSpan">(query, token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkSignature = function (query, token) {
+  var signature = query.signature;
+  var timestamp = query.timestamp;
+  var nonce = query.nonce;
+
+  var shasum = crypto.createHash(&#x27;sha1&#x27;);
+  var arr = [token, timestamp, nonce].sort();
+  shasum.update(arr.join(&#x27;&#x27;));
+
+  return shasum.digest(&#x27;hex&#x27;) === signature;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.event" id="apidoc.element.wechat.event">
+        function <span class="apidocSignatureSpan">wechat.</span>event
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">event = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;link&#x27;,
+// Title: &#x27;公众平台官网链接&#x27;,
+// Description: &#x27;公众平台官网链接&#x27;,
+// Url: &#x27;http://1024.com/&#x27;,
+// MsgId: &#x27;5837397520665436492&#x27; }
+}).<span class="apidocCodeKeywordSpan">event</span>(function (message, req, res, next) {
+// message为事件内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;event&#x27;,
+// Event: &#x27;LOCATION&#x27;,
+// Latitude: &#x27;23.137466&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.image" id="apidoc.element.wechat.image">
+        function <span class="apidocSignatureSpan">wechat.</span>image
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">image = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// message为文本内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125035&#x27;,
+// MsgType: &#x27;text&#x27;,
+// Content: &#x27;http&#x27;,
+// MsgId: &#x27;5837397576500011341&#x27; }
+}).<span class="apidocCodeKeywordSpan">image</span>(function (message, req, res, next) {
+// message为图片内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359124971&#x27;,
+// MsgType: &#x27;image&#x27;,
+// PicUrl: &#x27;http://mmsns.qpic.cn/mmsns/bfc815ygvIWcaaZlEXJV7NzhmA3Y2fc4eBOxLjpPI60Q1Q6ibYicwg/0&#x27;,
+// MediaId: &#x27;media_id&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.link" id="apidoc.element.wechat.link">
+        function <span class="apidocSignatureSpan">wechat.</span>link
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// CreateTime: &#x27;1359125311&#x27;,
+// MsgType: &#x27;location&#x27;,
+// Location_X: &#x27;30.283950&#x27;,
+// Location_Y: &#x27;120.063139&#x27;,
+// Scale: &#x27;15&#x27;,
+// Label: {},
+// MsgId: &#x27;5837398761910985062&#x27; }
+}).<span class="apidocCodeKeywordSpan">link</span>(function (message, req, res, next) {
+// message为链接内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;link&#x27;,
+// Title: &#x27;公众平台官网链接&#x27;,
+// Description: &#x27;公众平台官网链接&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.location" id="apidoc.element.wechat.location">
+        function <span class="apidocSignatureSpan">wechat.</span>location
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">location = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;shortvideo&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// ThumbMediaId: &#x27;media_id&#x27;,
+// MsgId: &#x27;5837397520665436492&#x27; }
+}).<span class="apidocCodeKeywordSpan">location</span>(function (message, req, res, next) {
+// message为位置内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125311&#x27;,
+// MsgType: &#x27;location&#x27;,
+// Location_X: &#x27;30.283950&#x27;,
+// Location_Y: &#x27;120.063139&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.reply" id="apidoc.element.wechat.reply">
+        function <span class="apidocSignatureSpan">wechat.</span>reply
+        <span class="apidocSignatureSpan">(content, fromUsername, toUsername, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reply = function (content, fromUsername, toUsername, message) {
+  var info = {};
+  var type = &#x27;text&#x27;;
+  info.content = content || &#x27;&#x27;;
+  info.createTime = new Date().getTime();
+  if (message &#x26;&#x26; (message.MsgType === &#x27;device_text&#x27; || message.MsgType === &#x27;device_event&#x27;)) {
+    info.DeviceType = message.DeviceType;
+    info.DeviceID = message.DeviceID;
+    info.SessionID = isNaN(message.SessionID) ? 0 : message.SessionID;
+    info.createTime = Math.floor(info.createTime / 1000);
+    if (message[&#x27;Event&#x27;] === &#x27;subscribe_status&#x27; || message[&#x27;Event&#x27;] === &#x27;unsubscribe_status&#x27;) {
+      delete info.content;
+      info.DeviceStatus = isNaN(content) ? 0 : content;
+    } else {
+      if (!(content instanceof Buffer)) {
+        content = String(content);
+      }
+      info.content = new Buffer(content).toString(&#x27;base64&#x27;);
+    }
+    type = message.MsgType;
+    if (message.MsgType === &#x27;device_event&#x27;) {
+      info[&#x27;Event&#x27;] = message[&#x27;Event&#x27;];
+    }
+  } else if (Array.isArray(content)) {
+    type = &#x27;news&#x27;;
+  } else if (typeof content === &#x27;object&#x27;) {
+    if (content.hasOwnProperty(&#x27;type&#x27;)) {
+      type = content.type;
+      if (content.content) {
+        info.content = content.content;
+      }
+      if (content.HardWare) {
+        info.HardWare = content.HardWare;
+      }
+    } else {
+      type = &#x27;music&#x27;;
+    }
+  }
+  info.msgType = type;
+  info.toUsername = toUsername;
+  info.fromUsername = fromUsername;
+  return compiled(info);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.use(express.query());
+app.use(&#x27;/wechat&#x27;, wechat(config, function (req, res, next) {
+// 微信输入信息都在req.weixin上
+var message = req.weixin;
+if (message.FromUserName === &#x27;diaosi&#x27;) {
+  // 回复屌丝(普通回复)
+  res.<span class="apidocCodeKeywordSpan">reply</span>(&#x27;hehe&#x27;);
+} else if (message.FromUserName === &#x27;text&#x27;) {
+  //你也可以这样回复text类型的信息
+  res.reply({
+    content: &#x27;text object&#x27;,
+    type: &#x27;text&#x27;
+  });
+} else if (message.FromUserName === &#x27;hehe&#x27;) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.reply2CustomerService" id="apidoc.element.wechat.reply2CustomerService">
+        function <span class="apidocSignatureSpan">wechat.</span>reply2CustomerService
+        <span class="apidocSignatureSpan">(fromUsername, toUsername, kfAccount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reply2CustomerService = function (fromUsername, toUsername, kfAccount) {
+  var info = {};
+  info.msgType = &#x27;transfer_customer_service&#x27;;
+  info.createTime = new Date().getTime();
+  info.toUsername = toUsername;
+  info.fromUsername = fromUsername;
+  info.content = {};
+  if (typeof kfAccount === &#x27;string&#x27;) {
+    info.content.kfAccount = kfAccount;
+  }
+  return compiled(info);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.session" id="apidoc.element.wechat.session">
+        function <span class="apidocSignatureSpan">wechat.</span>session
+        <span class="apidocSignatureSpan">(id, req, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">session = function (id, req, data) {
+  Object.defineProperty(this, &#x27;id&#x27;, { value: id });
+  Object.defineProperty(this, &#x27;req&#x27;, { value: req });
+  if (data) {
+    for (var key in data) {
+      this[key] = data[key];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+OAuth功能请前往：&#x3c;https://github.com/node-webot/wechat-oauth&#x3e;
+
+### WXSession支持
+由于公共平台应用的客户端实际上是微信，所以采用传统的Cookie来实现会话并不现实，为此中间件模块在openid的基础上添加了Session支持。一旦服务端启用了`connect.session`中间件，在业务中就可以访问`req.wxsession`属性。这个属性与`
+req.session`行为类似。
+
+```js
+app.use(connect.cookieParser());
+app.use(connect.<span class="apidocCodeKeywordSpan">session</span>({secret: &#x27;keyboard cat&#x27;, cookie: {maxAge: 60000}}));
+app.use(&#x27;/wechat&#x27;, wechat(&#x27;some token&#x27;, wechat.text(function (info, req, res, next) {
+if (info.Content === &#x27;=&#x27;) {
+  var exp = req.wxsession.text.join(&#x27;&#x27;);
+  req.wxsession.text = &#x27;&#x27;;
+  res.reply(exp);
+} else {
+  req.wxsession.text = req.wxsession.text || [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.shortvideo" id="apidoc.element.wechat.shortvideo">
+        function <span class="apidocSignatureSpan">wechat.</span>shortvideo
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shortvideo = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;video&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// ThumbMediaId: &#x27;media_id&#x27;,
+// MsgId: &#x27;5837397520665436492&#x27; }
+}).<span class="apidocCodeKeywordSpan">shortvideo</span>(function (message, req, res, next) {
+// message为短视频内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;shortvideo&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// ThumbMediaId: &#x27;media_id&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.text" id="apidoc.element.wechat.text">
+        function <span class="apidocSignatureSpan">wechat.</span>text
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### WXSession支持
+由于公共平台应用的客户端实际上是微信，所以采用传统的Cookie来实现会话并不现实，为此中间件模块在openid的基础上添加了Session支持。一旦服务端启用了`connect.session`中间件，在业务中就可以访问`req.wxsession`属性。这个属性与`
+req.session`行为类似。
+
+```js
+app.use(connect.cookieParser());
+app.use(connect.session({secret: &#x27;keyboard cat&#x27;, cookie: {maxAge: 60000}}));
+app.use(&#x27;/wechat&#x27;, wechat(&#x27;some token&#x27;, wechat.<span class="apidocCodeKeywordSpan">text</span>(function (info
+, req, res, next) {
+if (info.Content === &#x27;=&#x27;) {
+  var exp = req.wxsession.text.join(&#x27;&#x27;);
+  req.wxsession.text = &#x27;&#x27;;
+  res.reply(exp);
+} else {
+  req.wxsession.text = req.wxsession.text || [];
+  req.wxsession.text.push(info.Content);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.toXML" id="apidoc.element.wechat.toXML">
+        function <span class="apidocSignatureSpan">wechat.</span>toXML
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toXML = function (data) {
+  var include = function (path, includeData) {
+    var d = utils.shallowCopy({}, data);
+    if (includeData) {
+      d = utils.shallowCopy(d, includeData);
+    }
+    return includeFile(path, opts)(d);
+  };
+  return fn.apply(opts.context, [data || {}, escapeFn, include, rethrow]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.video" id="apidoc.element.wechat.video">
+        function <span class="apidocSignatureSpan">wechat.</span>video
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">video = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;voice&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// Format: &#x27;amr&#x27;,
+// MsgId: &#x27;5837397520665436492&#x27; }
+}).<span class="apidocCodeKeywordSpan">video</span>(function (message, req, res, next) {
+// message为视频内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;video&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// ThumbMediaId: &#x27;media_id&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.voice" id="apidoc.element.wechat.voice">
+        function <span class="apidocSignatureSpan">wechat.</span>voice
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">voice = function (fn) {
+  return (new Handler())[method](fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359124971&#x27;,
+// MsgType: &#x27;image&#x27;,
+// PicUrl: &#x27;http://mmsns.qpic.cn/mmsns/bfc815ygvIWcaaZlEXJV7NzhmA3Y2fc4eBOxLjpPI60Q1Q6ibYicwg/0&#x27;,
+// MediaId: &#x27;media_id&#x27;,
+// MsgId: &#x27;5837397301622104395&#x27; }
+}).<span class="apidocCodeKeywordSpan">voice</span>(function (message, req, res, next) {
+// message为音频内容
+// { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+// FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+// CreateTime: &#x27;1359125022&#x27;,
+// MsgType: &#x27;voice&#x27;,
+// MediaId: &#x27;OMYnpghh8fRfzHL8obuboDN9rmLig4s0xdpoNT6a5BoFZWufbE6srbCKc_bxduzS&#x27;,
+// Format: &#x27;amr&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.Event" id="apidoc.module.wechat.Event">module wechat.Event</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.Event.Event" id="apidoc.element.wechat.Event.Event">
+        function <span class="apidocSignatureSpan">wechat.</span>Event
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Event = function () {
+  this.events = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.Event.dispatch" id="apidoc.element.wechat.Event.dispatch">
+        function <span class="apidocSignatureSpan">wechat.Event.</span>dispatch
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dispatch = function (event) {
+  return function (message, req, res, next) {
+    // message为事件内容
+    // { ToUserName: &#x27;gh_d3e07d51b513&#x27;,
+    // FromUserName: &#x27;oPKu7jgOibOA-De4u8J2RuNKpZRw&#x27;,
+    // CreateTime: &#x27;1359125022&#x27;,
+    // MsgType: &#x27;event&#x27;,
+    // Event: &#x27;LOCATION&#x27;,
+    // Latitude: &#x27;23.137466&#x27;,
+    // Longitude: &#x27;113.352425&#x27;,
+    // Precision: &#x27;119.385040&#x27;,
+    // MsgId: &#x27;5837397520665436492&#x27; }
+    event._dispatch(message, req, res, next);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.Event.prototype" id="apidoc.module.wechat.Event.prototype">module wechat.Event.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.Event.prototype._dispatch" id="apidoc.element.wechat.Event.prototype._dispatch">
+        function <span class="apidocSignatureSpan">wechat.Event.prototype.</span>_dispatch
+        <span class="apidocSignatureSpan">(message, req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_dispatch = function (message, req, res, next) {
+  if (this.events[message.Event]) {
+    this.events[message.Event](message, req, res, next);
+  } else {
+    next();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.Event.prototype.add" id="apidoc.element.wechat.Event.prototype.add">
+        function <span class="apidocSignatureSpan">wechat.Event.prototype.</span>add
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (event, callback) {
+  this.events[event] = callback;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`req.wxsession`与`req.session`采用相同的存储引擎，这意味着如果采用redis作为存储，这样`wxsession`可以实现跨进程共享。
+
+### 等待回复
+等待回复，类似于电话拨号业务。该功能在WXSession的基础上提供。需要为等待回复预置操作，中间件将其抽象为`List`对象，在提供服务前需要添加服务。
+
+```js
+var List = require(&#x27;wechat&#x27;).List;
+List.<span class="apidocCodeKeywordSpan">add</span>(&#x27;view&#x27;, [
+[&#x27;回复{a}查看我的性别&#x27;, function (info, req, res) {
+  res.reply(&#x27;我是个妹纸哟&#x27;);
+}],
+[&#x27;回复{b}查看我的年龄&#x27;, function (info, req, res) {
+  res.reply(&#x27;我今年18岁&#x27;);
+}],
+[&#x27;回复{c}查看我的性取向&#x27;, &#x27;这样的事情怎么好意思告诉你啦- -&#x27;]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.List" id="apidoc.module.wechat.List">module wechat.List</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List.List" id="apidoc.element.wechat.List.List">
+        function <span class="apidocSignatureSpan">wechat.</span>List
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">List = function () {
+  this.map = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List.add" id="apidoc.element.wechat.List.add">
+        function <span class="apidocSignatureSpan">wechat.List.</span>add
+        <span class="apidocSignatureSpan">(name, items, head, delimiter, foot)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (name, items, head, delimiter, foot) {
+  var description = [];
+  var list = new List();
+  list.name = name;
+  items.forEach(function (item) {
+    var text = item[0];
+    // 抽取出key，并关联上对应的handle
+    var replaced = text.replace(/\{(.*)\}/, function (match, key) {
+      list.map[key] = item[1];
+      return key;
+    });
+    description.push(replaced);
+  });
+
+  if (delimiter) {
+    var lists = description.join(&#x27;\n&#x27; + delimiter + &#x27;\n&#x27;);
+    list.description = util.format(&#x27;%s\n%s\n%s&#x27;, head || &#x27;&#x27;, lists, (foot || &#x27;&#x27;));
+  } else {
+    list.description = description.join(&#x27;\n&#x27;);
+  }
+  listCache[name] = list;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`req.wxsession`与`req.session`采用相同的存储引擎，这意味着如果采用redis作为存储，这样`wxsession`可以实现跨进程共享。
+
+### 等待回复
+等待回复，类似于电话拨号业务。该功能在WXSession的基础上提供。需要为等待回复预置操作，中间件将其抽象为`List`对象，在提供服务前需要添加服务。
+
+```js
+var List = require(&#x27;wechat&#x27;).List;
+List.<span class="apidocCodeKeywordSpan">add</span>(&#x27;view&#x27;, [
+[&#x27;回复{a}查看我的性别&#x27;, function (info, req, res) {
+  res.reply(&#x27;我是个妹纸哟&#x27;);
+}],
+[&#x27;回复{b}查看我的年龄&#x27;, function (info, req, res) {
+  res.reply(&#x27;我今年18岁&#x27;);
+}],
+[&#x27;回复{c}查看我的性取向&#x27;, &#x27;这样的事情怎么好意思告诉你啦- -&#x27;]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List.clear" id="apidoc.element.wechat.List.clear">
+        function <span class="apidocSignatureSpan">wechat.List.</span>clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function () {
+  listCache = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List.get" id="apidoc.element.wechat.List.get">
+        function <span class="apidocSignatureSpan">wechat.List.</span>get
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (name) {
+  return listCache[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.List.prototype" id="apidoc.module.wechat.List.prototype">module wechat.List.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.List.prototype.get" id="apidoc.element.wechat.List.prototype.get">
+        function <span class="apidocSignatureSpan">wechat.List.prototype.</span>get
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key) {
+  return this.map[key];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.session" id="apidoc.module.wechat.session">module wechat.session</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.session.session" id="apidoc.element.wechat.session.session">
+        function <span class="apidocSignatureSpan">wechat.</span>session
+        <span class="apidocSignatureSpan">(id, req, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">session = function (id, req, data) {
+  Object.defineProperty(this, &#x27;id&#x27;, { value: id });
+  Object.defineProperty(this, &#x27;req&#x27;, { value: req });
+  if (data) {
+    for (var key in data) {
+      this[key] = data[key];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+OAuth功能请前往：&#x3c;https://github.com/node-webot/wechat-oauth&#x3e;
+
+### WXSession支持
+由于公共平台应用的客户端实际上是微信，所以采用传统的Cookie来实现会话并不现实，为此中间件模块在openid的基础上添加了Session支持。一旦服务端启用了`connect.session`中间件，在业务中就可以访问`req.wxsession`属性。这个属性与`
+req.session`行为类似。
+
+```js
+app.use(connect.cookieParser());
+app.use(connect.<span class="apidocCodeKeywordSpan">session</span>({secret: &#x27;keyboard cat&#x27;, cookie: {maxAge: 60000}}));
+app.use(&#x27;/wechat&#x27;, wechat(&#x27;some token&#x27;, wechat.text(function (info, req, res, next) {
+if (info.Content === &#x27;=&#x27;) {
+  var exp = req.wxsession.text.join(&#x27;&#x27;);
+  req.wxsession.text = &#x27;&#x27;;
+  res.reply(exp);
+} else {
+  req.wxsession.text = req.wxsession.text || [];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wechat.session.prototype" id="apidoc.module.wechat.session.prototype">module wechat.session.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.session.prototype.destroy" id="apidoc.element.wechat.session.prototype.destroy">
+        function <span class="apidocSignatureSpan">wechat.session.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (callback) {
+  delete this.req.wxsession;
+  this.req.sessionStore.destroy(this.id, callback);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Callback:
+ *
+ * - `err`, 错误对象，删除发生错误时传入
+ * @param {Function} callback 从存储中删除Session数据后的回调函数
+ */
+Session.prototype.destroy = function (callback) {
+  delete this.req.wxsession;
+  this.req.sessionStore.<span class="apidocCodeKeywordSpan">destroy</span>(this.id, callback);
+  return this;
+};
+
+module.exports = Session;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.session.prototype.save" id="apidoc.element.wechat.session.prototype.save">
+        function <span class="apidocSignatureSpan">wechat.session.prototype.</span>save
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (callback) {
+  this.req.sessionStore.set(this.id, this, callback || function(){});
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
