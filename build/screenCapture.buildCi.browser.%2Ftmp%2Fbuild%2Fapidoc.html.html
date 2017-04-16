@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.wechat">
+            function <span class="apidocSignatureSpan"></span>wechat
+            <span class="apidocSignatureSpan">(token, handle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.wechat.Event">
             function <span class="apidocSignatureSpan">wechat.</span>Event
             <span class="apidocSignatureSpan">()</span>
@@ -158,6 +167,15 @@
             <a class="apidocElementLiA" href="#apidoc.element.wechat.text">
             function <span class="apidocSignatureSpan">wechat.</span>text
             <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wechat.toString">
+            function <span class="apidocSignatureSpan">wechat.</span>toString
+            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -345,6 +363,30 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.wechat" id="apidoc.module.wechat">module wechat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.wechat" id="apidoc.element.wechat.wechat">
+        function <span class="apidocSignatureSpan"></span>wechat
+        <span class="apidocSignatureSpan">(token, handle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wechat = function (token, handle) {
+  if (arguments.length === 1) {
+    return new Handler(token);
+  }
+
+  if (handle instanceof Handler) {
+    handle.setToken(token);
+    return handle.middlewarify();
+  } else {
+    return new Handler(token, handle).middlewarify();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -717,6 +759,21 @@ if (info.Content === '=') {
   req.wxsession.text = req.wxsession.text || [];
   req.wxsession.text.push(info.Content);
 ...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wechat.toString" id="apidoc.element.wechat.toString">
+        function <span class="apidocSignatureSpan">wechat.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return toString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
